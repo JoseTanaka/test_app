@@ -1,10 +1,29 @@
 <?php 
 require('connection.php');
+session_start();
 
 function create($data) {
+if(checkToken($data['token'])){
 	insertDb($data['todo']);
 }
-
+}
+function h($s) {
+	return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
+}
+function setToken() {
+	$token = sha1(uniqid(mt_tand(), true));
+	$_SESSION['token'] = $token;
+}
+function checkToken($data) {
+	if (empty($_SESSION['token']) || ($_SESSION['token'] != $data)){
+		$_SESSION['err'] = '不正な操作です';
+		header('location: '.$_SERVER['HTTP_REFERER'].'');
+	}
+	return true;
+}
+function unsetSession() {
+	if(!empty($_SESSION['err'])) $_SESSION['err'] = '';
+}
 function index() {
 	return $todos = selectAll();
 }
