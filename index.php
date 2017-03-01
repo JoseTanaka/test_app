@@ -27,7 +27,7 @@
         <td><?php echo $todo['id'] ?></td>
         <td><?php echo $todo['todo'] ?></td>
         <td>
-          <a href="">更新</a>
+          <a href="edit.php?id=<?php echo $todo['id'] ?>">更新</a>
         </td>
         <td>
           <form action="store.php" method="POST">
