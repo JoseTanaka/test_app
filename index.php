@@ -8,7 +8,7 @@
   <title>Home</title>
 </head>
 <body>
-  welcome hello world
+  Welcome Hello World!
   <div>
      <a href="new.php">
   <p>新規作成</p>
@@ -31,7 +31,7 @@
         </td>
         <td>
           <form action="store.php" method="POST">
-            <input type="hidden" name="id" value="">
+            <input type="hidden" name="id" value="<?php echo $todo['id'] ?>">
             <input type="hidden" name="type" value="delete">
             <button type="submit">削除</button>
           </form>
