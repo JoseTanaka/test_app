@@ -5,7 +5,7 @@
   <title>新規作成</title>
 </head>
 <body>
-  <form action="store.php" method="POST">
+  <form action="store.php" method="POST" method="post">
     <input type="hidden" name="token" value="">
     <input type="text" name="todo">
     <input type="submit" value="作成">
