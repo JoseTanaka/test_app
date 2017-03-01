@@ -9,7 +9,7 @@ setToken();
   <title>新規作成</title>
 </head>
 <body>
-<?php if(isset($_SESSION['err'])); ?>
+<?php if(isset($_SESSION['err'])): ?>
   <p><?php echo $_SESSION['err'] ?></p>
 <?php endif; ?>
   <form action="store.php" method="POST">

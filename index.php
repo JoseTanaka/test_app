@@ -9,7 +9,7 @@
   <title>Home</title>
 </head>
 <body>
-  Welcome Hello World!
+  TODO頑張って行きましょう！
   <div>
      <a href="new.php">
   <p>新規作成</p>
@@ -25,7 +25,7 @@
       </tr>
       <?php foreach(index() as $todo): ?>
       <tr>
-        <td><?php echoh($todo['id']) ?></td>
+        <td><?php echo h($todo['id']) ?></td>
         <td><?php echo h($todo['todo']) ?></td>
         <td>
           <a href="edit.php?id=<?php echo h($todo['id']) ?>">更新</a>
