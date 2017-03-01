@@ -31,7 +31,7 @@
         </td>
         <td>
           <form action="store.php" method="POST">
-            <input type="hidden" name="id" value="">
+            <input type="hidden" name="id" value="<?php echo $todo['id'] ?>">
             <input type="hidden" name="type" value="delete"> 
             <button type="submit">削除</button>
           </form>

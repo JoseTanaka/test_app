@@ -11,7 +11,7 @@
     <input type="submit" value="作成">
   </form>
   <div>
-    <a href="index.html">一覧へもどる</a>
+    <a href="">一覧へもどる</a>
   </div>
 </body>
 </html>
